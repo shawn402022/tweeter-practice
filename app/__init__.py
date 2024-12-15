@@ -10,7 +10,7 @@ app=Flask(__name__)
 print(__name__)
 
 app.config.from_object(Config)
-app.register_blueprint(routes.tweets_routes.tweets, url_prefix='/tweets')
+app.register_blueprint(all_tweets, url_prefix='/tweets')
 
 
 @app.route('/')

@@ -12,11 +12,13 @@
     <nav>
         <a href="/">Home</a>
         <a href="/tweets/feed">Feed</a>
-        <a href="/new">New Tweet</a>
+        <a href="/tweets/new">New Tweet</a>
     </nav>
     <body>
         {%block first%}
             {%block second%}
+                {%block third%}
+                {% endblock%}
             {% endblock %}
 
         {% endblock %}

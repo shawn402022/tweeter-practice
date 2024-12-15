@@ -9,7 +9,11 @@
     <div class="tweet">
         <p>{{ tweet.author }} tweeted on {{ tweet.date }} ...</p>
         <p>"{{ tweet.tweet }}"</p>
-        <p>Likes: {{ tweet.likes / 1000 }}k</p>
+        {% if tweet.likes > 520000 %}
+            <p style="color:orange">Likes{{tweet.likes/ 1000}}k</p>
+        {%else %}
+            <p>Likes: {{ tweet.likes / 1000 }}k</p>
+        {% endif%}
     </div>
     {% endfor %}
 
